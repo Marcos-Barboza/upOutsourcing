@@ -26,7 +26,7 @@ const Index: React.FC = () => {
       </div>
       <div style={{ marginBottom: '10px' }}>{!favorites && <Find />}</div>
       <Table favorites={favorites} />
-      <Details />
+      <Details favorites={favorites} />
     </div>
   );
 };

@@ -13,7 +13,11 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-const Details = () => {
+interface Props {
+  favorites: boolean;
+}
+
+const Details: React.FC<Props> = ({ favorites }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const open = useSelector((state: RootState) => state.character.showDetails).length > 0;
@@ -56,7 +60,7 @@ const Details = () => {
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '30px' }}>
             <DefaultButton color="secondary" onClick={handleClose} title="Cancelar" />
-            <DefaultButton color="primary" onClick={handleSave} title="Salvar" />
+            {!favorites && <DefaultButton color="primary" onClick={handleSave} title="Salvar" />}
           </div>
         </div>
       )}
