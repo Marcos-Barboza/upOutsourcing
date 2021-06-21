@@ -1,7 +1,12 @@
+import { storeWrapper } from '../store';
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+interface OwnProps {
+  Component: React.FC;
 }
 
-export default MyApp;
+const MyApp: React.FC<OwnProps> = ({ Component, ...pageProps }) => {
+  return <Component {...pageProps} />;
+};
+
+export default storeWrapper.withRedux(MyApp);
