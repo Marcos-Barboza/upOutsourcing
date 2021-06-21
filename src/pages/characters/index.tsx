@@ -11,7 +11,7 @@ const Index: React.FC = () => {
   return (
     <div style={{ padding: '30px', width: '45%' }}>
       <div style={{ marginBottom: '20px' }}>
-        <Link target="brank" href="https://marcosleandrobarboza.vercel.app">
+        <Link target="brank" href="https://up-outsourcing.vercel.app/">
           UP Outsourcing - Processo Seletivo
         </Link>
       </div>
